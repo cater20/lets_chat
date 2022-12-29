@@ -1,9 +1,9 @@
 
 nav {
     .navbar-header {
-      width: 80%;
+      width: 100%;
       button, .navbar-brand {
-        transition: opacity 0.005s;
+        transition: opacity 0.015s;
       }
       button {
         margin-right: 0;
@@ -11,7 +11,9 @@ nav {
       button:hover, .navbar-brand:hover {
         opacity: 0.8;
       }
+    
     }
+   
   }
 
 .navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
@@ -20,4 +22,9 @@ nav {
     a {
       color: white !important;
     }
+    
+  }
+
+  body {
+    margin-top: 50px;
   }
