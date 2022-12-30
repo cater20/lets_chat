@@ -80,3 +80,5 @@ group :test do
 end
 #faker
 gem 'faker'
+#pagination
+gem 'will_paginate', '~> 3.1.0'
