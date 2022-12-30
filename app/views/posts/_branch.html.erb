@@ -14,6 +14,10 @@
     <%= render 'posts/branch/categories', branch: branch %>
   </div>
 
+<div class="row">
+   <%= render partial: no_posts_partial_path(@posts) %>
+  </div>
+
   <div class="row">
     <div class="col-sm-12" id="feed">
       <%= render @posts %>
