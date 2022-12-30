@@ -19,7 +19,7 @@ nav {
   }
 
 .navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
-    background: navbarColor #219e79 !important;
+    background: navbarColor #0ddf30 !important;
    
     border: none;
     a {
@@ -61,7 +61,7 @@ nav {
   
   .active a {
     background: navbarColor !important;
-    border-bottom: solid 5px white;
+    border-bottom: solid 5px hsl(96, 92%, 45%);
   }
   
   .dropdown-toggle, .dropdown-menu {
@@ -71,5 +71,5 @@ nav {
   
   .dropdown-menu a:hover {
     color: black !important;
-    background: white !important;
+    background: #12ec0a !important;
   }
