@@ -1,5 +1,6 @@
 class RegistrationsController < ApplicationController
-    private
+ 
+  private
 
   def sign_up_params
     params.require(:user).permit( :name, 
@@ -14,5 +15,5 @@ class RegistrationsController < ApplicationController
                                   :password, 
                                   :password_confirmation, 
                                   :current_password)
-  end 
+  end
 end
