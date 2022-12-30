@@ -16,12 +16,12 @@ module PostsHelper
         end
       end
       
-     # def no_posts_partial_path
-      #  @posts.empty? ? 'posts/branch/no_posts' : 'shared/empty_partial'
-     # end
-      def no_posts_partial_path(posts)
-        posts.empty? ? 'posts/shared/no_posts' : 'shared/empty_partial'
+      def no_posts_partial_path
+       @posts.empty? ? 'posts/branch/no_posts' : 'shared/empty_partial'
       end
+     # def no_posts_partial_path(posts)
+     #   posts.empty? ? 'posts/shared/no_posts' : 'shared/empty_partial'
+      #end
       def post_format_partial_path
         current_page?(root_path) ? 'posts/post/home_page' : 'posts/post/branch_page'
       end

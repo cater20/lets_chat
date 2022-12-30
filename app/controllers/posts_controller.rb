@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
 
-    def index
-        @hobby_posts = Post.by_branch('hobby').limit(8)
-        @study_posts = Post.by_branch('study').limit(8)
-        @team_posts = Post.by_branch('team').limit(8)
-      end
+    #def index
+       # @hobby_posts = Post.by_branch('hobby').limit(8)
+       # @study_posts = Post.by_branch('study').limit(8)
+        #@team_posts = Post.by_branch('team').limit(8)
+      #end
 
     def show
         @post = Post.find_by(params[:id])
@@ -45,21 +45,10 @@ class PostsController < ApplicationController
       end
 
       def get_posts
-        branch = params[:action]
-        search = params[:search]
-        category = params[:category]
-      
-        if category.blank? && search.blank?
-          posts = Post.by_branch(branch).all
-        elsif category.blank? && search.present?
-          posts = Post.by_branch(branch).search(search)
-        elsif category.present? && search.blank?
-          posts = Post.by_category(branch, category)
-        elsif category.present? && search.present?
-          posts = Post.by_category(branch, category).search(search)
-        else
-        end
-      end
-
+        PostsForBranchService.new({
+            search: params[:search],
+            category: params[:category],
+            branch: params[:action]
+          }).call
     end
-    
+end
