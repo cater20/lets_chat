@@ -17,7 +17,8 @@ nav {
   }
 
 .navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
-    background:#323738 !important;
+    background: navbarColor #323738 !important;
+   
     border: none;
     a {
       color: white !important;
